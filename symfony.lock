@@ -93,6 +93,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "exsyst/swagger": {
+        "version": "v0.4.1"
+    },
     "friendsofsymfony/rest-bundle": {
         "version": "2.2",
         "recipe": {
@@ -167,6 +170,31 @@
             "./config/packages/prod/jms_serializer.yaml"
         ]
     },
+    "nelmio/api-doc-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "c8e0c38e1a280ab9e37587a8fa32b251d5bc1c94"
+        },
+        "files": [
+            "./config/packages/nelmio_api_doc.yaml",
+            "./config/routes/nelmio_api_doc.yaml"
+        ]
+    },
+    "nelmio/cors-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "f0436fc35fca88eada758311f8de43bfb61f1980"
+        },
+        "files": [
+            "./config/packages/nelmio_cors.yaml"
+        ]
+    },
     "nikic/php-parser": {
         "version": "v4.2.2"
     },
@@ -175,6 +203,15 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.2"
+    },
+    "phpdocumentor/reflection-common": {
+        "version": "1.0.1"
+    },
+    "phpdocumentor/reflection-docblock": {
+        "version": "4.3.1"
+    },
+    "phpdocumentor/type-resolver": {
+        "version": "0.4.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -301,6 +338,9 @@
     "symfony/mime": {
         "version": "v4.3.1"
     },
+    "symfony/options-resolver": {
+        "version": "v4.3.1"
+    },
     "symfony/orm-pack": {
         "version": "v1.0.6"
     },
@@ -336,6 +376,9 @@
         "version": "v4.3.1"
     },
     "symfony/property-access": {
+        "version": "v4.3.1"
+    },
+    "symfony/property-info": {
         "version": "v4.3.1"
     },
     "symfony/routing": {
@@ -417,6 +460,9 @@
     "symfony/yaml": {
         "version": "v4.3.1"
     },
+    "webmozart/assert": {
+        "version": "1.4.0"
+    },
     "willdurand/jsonp-callback-validator": {
         "version": "v1.1.0"
     },
@@ -428,5 +474,8 @@
     },
     "zendframework/zend-eventmanager": {
         "version": "3.2.1"
+    },
+    "zircote/swagger-php": {
+        "version": "2.0.14"
     }
 }

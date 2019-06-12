@@ -9,7 +9,11 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture
 {
-    const TEST_USER_1 = '';
+    const TEST_USER_1 = 'testUser1';
+    const TEST_PASS_1 = 'testtest';
+
+    const TEST_USER_2 = 'testUser2';
+    const TEST_PASS_2 = 'testtest';
 
     protected $passwordEncoder;
 
@@ -19,14 +23,14 @@ class UserFixtures extends Fixture
 
     public function load(ObjectManager $manager) {
         $user = new User();
-        $user->setLogin('testUser1');
-        $user->setPassword($this->passwordEncoder->encodePassword($user, 'testtest'));
+        $user->setLogin(static::TEST_USER_1);
+        $user->setPassword($this->passwordEncoder->encodePassword($user, static::TEST_PASS_1));
 
         $manager->persist($user);
 
         $user = new User();
-        $user->setLogin('testUser2');
-        $user->setPassword($this->passwordEncoder->encodePassword($user, 'testtest'));
+        $user->setLogin(static::TEST_USER_2);
+        $user->setPassword($this->passwordEncoder->encodePassword($user, static::TEST_PASS_2));
 
         $manager->persist($user);
 
