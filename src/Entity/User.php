@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Dto\UserInfo;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -33,6 +34,11 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
 
     public function getId(): ?int
     {
@@ -110,5 +116,31 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Получение упрощённого представления.
+     *
+     * @return UserInfo
+     */
+    public function toInfo(): UserInfo {
+        $info        = new UserInfo();
+        $info->id    = $this->id;
+        $info->login = $this->login;
+        $info->email = $this->email;
+
+        return $info;
     }
 }

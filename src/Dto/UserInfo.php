@@ -20,4 +20,10 @@ class UserInfo {
      * @SWG\Property(type="string", description="Имя пользователя")
      */
     public $login;
+
+    /**
+     * @Serializer\Type("string")
+     * @SWG\Property(type="string", description="E-Mail")
+     */
+    public $email;
 }
