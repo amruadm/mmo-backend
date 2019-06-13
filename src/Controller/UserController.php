@@ -79,7 +79,7 @@ class UserController extends AbstractFOSRestController
      * @param UserPasswordEncoderInterface     $passwordEncoder
      * @param ConstraintViolationListInterface $validationErrors
      *
-     * @Rest\Post("/api/v1/user/register")
+     * @Rest\Post("/api/v1/user/register/")
      *
      * @SWG\Response(
      *     response=201,
