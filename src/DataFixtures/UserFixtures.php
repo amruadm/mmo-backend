@@ -28,6 +28,7 @@ class UserFixtures extends Fixture
         $user->setLogin(static::TEST_USER_1);
         $user->setPassword($this->passwordEncoder->encodePassword($user, static::TEST_PASS_1));
         $user->setEmail(static::TEST_EMAIL);
+        $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
 
         $manager->persist($user);
 
