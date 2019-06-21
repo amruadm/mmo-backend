@@ -28,6 +28,11 @@ class GameServer
     private $addr;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $port = 7777;
+
+    /**
      * @ORM\Column(type="boolean")
      */
     private $enabled;
@@ -61,6 +66,18 @@ class GameServer
         return $this;
     }
 
+    public function getPort(): ?int
+    {
+        return $this->port;
+    }
+
+    public function setPort(int $port): self
+    {
+        $this->port = $port;
+
+        return $this;
+    }
+
     public function getEnabled(): ?bool
     {
         return $this->enabled;
@@ -82,6 +99,7 @@ class GameServer
         $info       = new ServerInfo();
         $info->name = $this->name;
         $info->addr = $this->addr;
+        $info->port = $this->port;
 
         return $info;
     }

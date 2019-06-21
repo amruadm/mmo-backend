@@ -25,4 +25,12 @@ class ServerInfo
      * @SWG\Property(type="string", description="Адресс сервера")
      */
     public $addr;
+
+    /**
+     * Порт.
+     *
+     * @Serializer\Type("integer")
+     * @SWG\Property(type="integer", description="Порт сервера")
+     */
+    public $port;
 }
