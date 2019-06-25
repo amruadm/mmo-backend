@@ -22,3 +22,8 @@
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
+
+###> override global php and composer ###
+composer.bat
+php.bat
+###< override global php and composer ###
